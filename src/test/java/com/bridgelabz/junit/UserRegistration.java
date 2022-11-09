@@ -29,7 +29,7 @@ public class UserRegistration {
     @Test
     void given_email_id_should_returnTrue(){
         UserValidation validation= new UserValidation();
-        Boolean result2 = validation.checkEmail("Avinashchavan015@gmail.com");
+        Boolean result2 = validation.checkEmail("Avinashchavan@gmail.com");
         Assertions.assertEquals(result2,true);
     }
 
@@ -38,5 +38,12 @@ public class UserRegistration {
         UserValidation validation = new UserValidation();
         Boolean result3 = validation.checkPhoneNumber("91 9767884048");
         Assertions.assertEquals(result3,true);
+    }
+
+    @Test
+    void given_password_should_returnTrue(){
+        UserValidation validation = new UserValidation();
+        Boolean passrule1 = validation.checkPassword("avinashc");
+        Assertions.assertEquals(passrule1, true);
     }
 }
