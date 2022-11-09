@@ -9,6 +9,7 @@ public class UserValidation {
     public static final String PHONE_NUMBER = "^[0-9]{2}+\s[0-9]{10}$";
     public static final String PASSWORD1 = "^[a-z]{8,}$";
     public static final String PASSWORD2 = "^[A-Z]{1}[a-z0-9]{7,}$";
+    public static final String PASSWORD3 = "^[A-Z]{1}[a-z0-9]{7,}$";
     public Boolean checkFirstName(String firstName) {
         return (Pattern.matches(VALIDATE_NAME, firstName));
     }
@@ -31,5 +32,9 @@ public class UserValidation {
 
     public Boolean checkPassword2(String password2) {
         return (Pattern.matches(PASSWORD2,password2));
+    }
+
+    public Boolean checkPassword3(String password3) {
+        return (Pattern.matches(PASSWORD3,password3));
     }
 }
