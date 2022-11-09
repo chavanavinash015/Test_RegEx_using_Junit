@@ -11,6 +11,7 @@ public class UserValidation {
     public static final String PASSWORD2 = "^[A-Z]{1}[a-z0-9]{7,}$";
     public static final String PASSWORD3 = "^[A-Z]{1}[a-z0-9]{7,}$";
     public static final String PASSWORD4 = "^[A-Z]{1}[a-z]{1,}[@][0-9]{1,}$";
+    public static final String EMAILSAMPLES = "^[A-Z]{1,}[A-Za-z]{5,}[0-9]{2,}[@]{1}[.]?[a-z]{2,}$";
     public Boolean checkFirstName(String firstName) {
         return (Pattern.matches(VALIDATE_NAME, firstName));
     }
@@ -41,5 +42,9 @@ public class UserValidation {
 
     public Boolean checkPassword4(String password4) {
         return (Pattern.matches(PASSWORD4,password4));
+    }
+
+    public Boolean checkEmailSamples(String emailsamples) {
+        return (Pattern.matches(EMAILSAMPLES,emailsamples));
     }
 }
