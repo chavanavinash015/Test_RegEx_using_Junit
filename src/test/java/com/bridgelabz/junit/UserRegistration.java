@@ -19,4 +19,10 @@ public class UserRegistration {
         Boolean result =validation.checkFirstName("Avinash");
         Assertions.assertEquals(result,true);
     }
+
+    void given_last_name_should_returnTrue(){
+        UserValidation validation= new UserValidation();
+        Boolean result1 = validation.checkLastName("Chavan");
+        Assertions.assertEquals(result1,true);
+    }
 }
