@@ -53,4 +53,11 @@ public class UserRegistration {
         Boolean passrule2 = validation.checkPassword2("Avinash015");
         Assertions.assertEquals(passrule2,true);
     }
+
+    @Test
+    void given_password3_should_returnTrue(){
+        UserValidation validation = new UserValidation();
+        Boolean passrule3 = validation.checkPassword3("Avinash015");
+        Assertions.assertEquals(passrule3,true);
+    }
 }
