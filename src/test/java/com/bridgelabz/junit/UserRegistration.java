@@ -67,4 +67,11 @@ public class UserRegistration {
         Boolean passrule4 = validation.checkPassword4("Chavan@123");
         Assertions.assertEquals(passrule4,true);
     }
+
+    @Test
+    void given_emailsamples_should_returnTrue(){
+        UserValidation validation = new UserValidation();
+        Boolean emailSamples = validation.checkEmailSamples("Auranga020@.com");
+        Assertions.assertEquals(emailSamples,true);
+    }
 }
